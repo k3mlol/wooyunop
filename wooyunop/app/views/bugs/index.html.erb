@@ -1,0 +1,32 @@
+
+<div class="am-g">
+<div class="am-container">
+<h1>WOOYUN search</h1>
+<li>搜索关键字：<%= @test.values %></li>
+<li>搜索条数：<%= @length %></li>
+<table class="am-table am-table-bordered">
+  <thead>
+    <tr>
+        <th>wooyun_ID</th>
+        <th>标题</th>
+        <th>提交者</th>
+        <th>厂商</th>
+        <th>提交时间</th>
+    </tr>
+</thead>
+<tbody>
+<% @result.each do |bug| %>
+<tr>
+<td><a id="linkid" onclick=window.open('<%= "http://wooyun.jozxing.cc/static/bugs/" + bug['wybug_id'] %>')><%= bug['wybug_id'] + ".html" %></a></td>
+<td><%= bug['wybug_title'] %></td>
+<td><%= bug['wybug_author'] %></td>
+<td><%= bug['wybug_corp'] %></td>
+<td><%= bug['wybug_date'] %></td>
+</tr>
+<% end %>
+</tbody>
+</table>
+<%= will_paginate @result ,class: "am-pagination jumppage" %>
+</div>
+<div class="am-panel-footer"></div>
+</div>

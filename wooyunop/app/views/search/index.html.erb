@@ -1,0 +1,29 @@
+<div class="am-g">
+<div class="am-container">
+    <div id="titleid">
+      <h1>WooYunOp</h1>
+    </div>
+  <%= search_form_for @q do |f| %>
+  <div class="am-center" id="selectid">
+  <%= radio_button_tag :type, "id" %>
+  <%= label_tag(:type_cpmpany, "wooyun_id") %>
+
+  <%= radio_button_tag :type, "author" %>
+  <%= label_tag(:type_author, "author") %>
+
+  <%= radio_button_tag :type, "title" %>
+  <%= label_tag(:type_title, "title") %>
+
+  <%= radio_button_tag :type, "vulns" %>
+  <%= label_tag(:type_title, "vlun_type") %>
+
+  <%= radio_button_tag :type, "company" %>
+  <%= label_tag(:type_cpmpany, "conpany") %>
+  </div>
+  <div class="search-bar" id="searchform">
+  <%= f.search_field :id %>
+  <input id="commit" class="submit am-btn" value="搜索" index="1" type="submit">
+  </div>
+<% end %>
+</div>
+</div>

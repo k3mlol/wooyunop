@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Wooyunop</title>
+    <div class="am-g">
+      <div class="am-container">
+    <ul class="am-nav am-nav-pills">
+      <li><a href="/">首页</a></li>
+      <li><a href="/">Hot search</a></li>
+      <li><a href="#">关于我们</a></li>
+    </ul>
+  </div>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+</div>
+<footer data-am-widget="footer" class="am-footer am-footer-default">
+  <div class="am-footer-switch">
+  <span class="am-footer-ysp" data-rel="mobile">SST&k3m
+  </span>
+  </div>
+  <div class="am-footer-miscs">
+    <p>THX SST</p>
+  </div>
+</footer>
+</html>
